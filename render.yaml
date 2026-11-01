@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kodacam-support
+    runtime: static
+    buildCommand: echo "Static HTML ready"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
